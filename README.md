@@ -10,7 +10,7 @@ An enterprise-grade full-stack application for tracking military assets (vehicle
 |---|---|
 | Frontend | React (Vite), Tailwind CSS, Lucide React, Axios |
 | Backend | Node.js, Express.js |
-| Database | PostgreSQL (raw `pg` driver, parameterized SQL) |
+| Database | PostgreSQL via Neon (raw `pg` driver, parameterized SQL) |
 | Auth | JSON Web Tokens (JWT), Bcrypt |
 
 ---
@@ -106,12 +106,7 @@ npm install
 Create `backend/.env`:
 
 ```
-DB_USER=postgres
-DB_HOST=localhost
-DB_NAME=military_asset_management
-DB_PASSWORD=your_password
-DB_PORT=5432
-
+DATABASE_URL=postgresql://<user>:<password>@<neon_hostname>/<dbname>?sslmode=require
 JWT_SECRET=your_jwt_secret_here
 PORT=5000
 FRONTEND_URL=http://localhost:5173
@@ -160,6 +155,7 @@ Frontend runs at `http://localhost:5173`, backend API at `http://localhost:5000/
 |---|---|---|---|
 | Admin | `admin_user` | `AdminPass123!` | All Bases (Global) |
 | Base Commander | `commander_alpha` | `AdminPass123!` | Fort Alpha (Base #1) |
+| Logistics Officer | `logistics_officer` | `LogisticsPass123#` | Base #1 / Global Ops |
 
 > Additional Logistics Officer or Base Commander accounts can be created from the **User Management** screen once logged in as Admin.
 
