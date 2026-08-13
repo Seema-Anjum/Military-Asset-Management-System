@@ -206,3 +206,13 @@ Base URL: `http://localhost:5000/api`. All routes except `/auth/login` require a
 
 - **Backend:** Render  — set `DATABASE_URL`/`DB_*` and `JWT_SECRET` as environment variables.
 - **Frontend:** Vercel — set `VITE_API_BASE_URL` to the deployed backend URL.
+
+---
+
+## Live Deployment
+
+| Service | URL |
+|---|---|
+| Frontend | https://military-asset-management-system-git-main-seema-anjums-projects.vercel.app/ |
+| Backend API | https://military-asset-management-system-foii.onrender.com/api |
+| Health Check | https://military-asset-management-system-foii.onrender.com/api/health |
